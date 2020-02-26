@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap');
+
+
+html {
+    overflow-y: scroll;
+   }
+
+h2 {font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 16px;
+}
+
+.inicio{overflow: hidden;}
+
+.cabecera{
+position: -webkit-sticky;
+position: sticky;
+top:60px;     
+z-index: 1030;
+
+}
+
+@media (max-width: 1200px) {
+    .soloweb {display: none;        
+
+             
+
+    }
+
+.imgresponsive{width: 300%;}
+
+}

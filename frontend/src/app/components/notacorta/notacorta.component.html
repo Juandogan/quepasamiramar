@@ -1,0 +1,53 @@
+
+
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<body class="container" style="margin-top: 125px">
+   
+   <div class="cartelera main row"> 
+    
+    <!-- encabezado titulo   -->        
+    <div class="container row" style="margin-top:20px">
+        <div class = "col-12">
+                <i  class="material-icons" (click) = this.cancel()  style="float:right">highlight_off</i>
+                <h3>{{nota.palabrasClaves}}  <span class="badge badge-danger" style="margin-right: 5px;">{{nota.pill}} </span></h3>
+                <span class="badge badge-danger"></span> 
+                <h1 class="titulo" >{{ nota.titulo }}</h1>
+                <h2>{{ nota.description }}</h2>    
+             
+        </div>
+    </div>
+
+
+
+
+
+
+
+       <div class="col-5 container" >                    
+            <img  class ="container" src={{nota.imagen}} alt="" width="100%" style="margin-top:5px; margin-bottom: 10px">
+            <h3 class="container" style="float:left"> Ingrese la descripcion de la foto aqui </h3>
+        </div>                   
+
+        
+       <div class= "col-7 " style="margin-top : 5px" >      
+
+            <hr>
+            <p class ="capital"> {{ nota.description2 }}</p>
+            <div style="align-items: center">
+                    <img  src="../../../assets/mega.png" alt="error" width="10%" style="float:left">
+                    <small >Visitas:
+                          <span class="badge badge-secondary" >159</span>
+                          Publicado:
+                          <span class="badge badge-secondary" >09/11/2019 </span>
+                          Compartir:
+                          <img src="../../../assets/face.png" alt="" width="3%">
+                          <img src="../../../assets/tweet.png" alt="" width="5%">
+                         
+                          </small>
+                      </div>
+       </div>
+
+    </div>
+</body>

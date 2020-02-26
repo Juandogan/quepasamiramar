@@ -1,0 +1,76 @@
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <div class="soloweb container fixed-top" style="background-color:white; overflow:hidden; padding: 0%; position: fixed"> 
+         <img  src="../assets/logonavidad.jpg" alt="" width="17%" >
+    
+         <img src="../assets/bqslogo.png" alt="" width="18%" style="margin-bottom: 10px; margin-left:550px;  " alt='Imagen not found'>
+      <img src="../../../assets/rockola.jpg" alt="" width="15%" style="margin-left: 20px">   
+    </div> 
+  
+      <nav class="container navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="margin-top:80px;" >
+      
+        
+          <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link"  (click)=" this.cardService.ordenarTodos(cardService)" [routerLink]="['/']" >Inicio <span class="sr-only">(current)</span></a>
+              </li>
+          
+    
+              <li class="nav-item">
+                <a class="nav-link"  [routerLink]="['/']">Institucional</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" (click)= this.cardService.ordenarComercial(cardService) [routerLink]="['/']">Comercial</a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link" (click)= this.cardService.ordenarComercial(cardService) [routerLink]="['/']">Mercadolibre</a>
+              </li>
+      
+              <li class="nav-item dropdown"  >
+                <a class="nav-link dropdown-toggle"  href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  >
+                  Cultura
+                </a>
+                <div  class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" (click)= this.cardService.ordenarCultura(cardService) [routerLink]="['/']" >Todos</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Eventos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/publicar']">Publicar</a>
+              </li>
+                
+              <li class="nav-item dropdown"  >
+                <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" >
+                  Turismo
+                </a>
+                <div  class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" (click)= this.cardService.ordenarTurismo(cardService) [routerLink]="['/']">Ver todos</a>
+                  <a class="dropdown-item" (click)= this.cardService.ordenarInsti(cardService) [routerLink]="['/']">Puntos Turísticos de interés</a>
+                  <a class="dropdown-item" href="#"> Alojamientos</a>
+                  <a class="dropdown-item" href="#">Resto Bares&Pubs</a>
+                  <a class="dropdown-item" href="#">Puntos Turísticos</a>
+                  <a class="dropdown-item" href="#"></a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Informacion Util</a>
+                </div>
+                </li>
+                                     
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" name ="filterPost" placeholder="Search" aria-label="Search" [(ngModel)]="filterPost">
+              <button class="btn btn-outline-success my-2 my-sm-0"  (click)= "this.cardService.ordenarPapa(filterPost)" >Buscar</button>
+            </form>
+          </div>
+
+        </nav>
+    

@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed|Oswald|Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anton|Bangers|Lobster|Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+
+
+html {
+    overflow-y: scroll;
+   }
+
+.tarjeta {padding:1%;
+          max-height: 590px;
+    }
+        
+        hr{margin: 5px;}
+     
+.cardfooter{ position:static; bottom:3px;} 
+
+
+
+h1 {font-family: 'Roboto Condensed';
+    font-size: 20px;
+    margin-bottom: 4px;    
+    margin-top: 5px;
+    color: rgb(89, 82, 110);}
+          
+    
+    img{border-radius: 2px; 
+        object-fit: cover
+        
+        ;
+    }
+    
+    .titulo {
+       
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden; }
+
+
+        
+
+    .text {
+       
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden}
+    
+    article {padding:1%;}
+    
+     
+    
+      
+    
+    h1 {font-family: 'Roboto Condensed';
+    font-size: 24px;
+    padding-left: 6px;
+    margin-top: -5px; 
+    border-left: 1px solid rgb(171, 174, 211);
+    
+    }
+    
+    h2{font-family: 'Fira Sans Condensed', sans-serif; font-size: 17px; margin-top:6px;color:gray ;}
+        
+    h3{font-family: 'Fira Sans Condensed', sans-serif; font-size: 14px; color:rgb(133, 119, 158) ; }
+
+    h4{font-family: 'Fira Sans Condensed', sans-serif; font-size: 18px; color: white ; background-color: rgb(114, 44, 44)}  
+    
+    h5{font-family: 'Fira Sans Condensed', sans-serif;    font-size: 18px ;    }
+     
+    h6{font-family: 'Anton', sans-serif; font-size: 40px; color:rgb(0, 0, 0) ; text-align: left; margin-top:10px }  
+    
+    p{font-family: 'Fira Sans Condensed', sans-serif;
+    font-size: 10px;
+    margin-top:6px;
+    }
+    
+    hr{margin: 5px;}
+    
+
+    @media (max-width: 1200px) {
+        img {width: 100%; height: 100%;   }  
+
+.tarjeta {padding:1%;
+        background-color:rgb(255, 255, 255);
+        border-radius: 0px;
+        width: 100%;
+        height: 100%;}
+        
+     
+       
+
+};
+    
+    
+
+

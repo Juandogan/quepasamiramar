@@ -1,0 +1,79 @@
+
+
+
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<body class="container" style="margin-top: 125px">
+   
+   <div class="cartelera main row"> 
+    
+    <!-- encabezado titulo   -->        
+    <div class="container row" style="margin-top:20px">
+        <div class = "col-12">
+                <i  class="material-icons" (click) = this.cancel()  style="float:right">highlight_off</i>
+                <h3>{{nota.palabrasClaves}}  <span class="badge badge-danger" style="margin-right: 5px;">{{nota.pill}} </span></h3>
+                <span class="badge badge-danger"></span> 
+                <h1 class="titulo" >{{ nota.titulo }}</h1>
+                <h2>{{ nota.description }}</h2>    
+             
+        </div>
+    </div>
+
+
+
+
+
+
+
+       <div class="col-8 container" >                    
+          
+            <hr>
+            
+            
+            
+            <p class ="capital"> {{ nota.description2 }}</p>
+            <p > {{ nota.description3 }}</p>
+            <img  class ="container" src={{nota.imagen}} alt="" width="100%" style="margin-top:5px; margin-bottom: 10px">
+            <h3 class="container" style="float:left"> {{nota.imagendsc}} </h3>
+            <p > {{ nota.description4 }}</p>
+            <p > {{ nota.description5 }}</p>
+            <img  class ="container" src={{nota.imagen2}} alt="" width="100%" style="margin-top:5px; margin-bottom: 10px">
+            <h3 class="container" style="float:left"> {{nota.imagendsc2}} </h3>
+            
+            <p > {{ nota.description6 }}</p>
+            
+
+
+
+
+            <div style="align-items: center">
+                    <img  src="../../../assets/mega.png" alt="error" width="10%" style="float:left">
+                    <small >Visitas:
+                          <span class="badge badge-secondary" >159</span>
+                          Publicado:
+                          <span class="badge badge-secondary" >09/11/2019 </span>
+                          Compartir:
+                          <img src="../../../assets/face.png" alt="" width="3%">
+                          <img src="../../../assets/tweet.png" alt="" width="5%">
+                         
+                          </small>
+                      </div>
+                    </div>
+                     
+       <div class= "col-4 " style="margin-top : 5px" >      
+            <img  class ="container" src={{nota.imagen3}} alt="" width="100%" style="margin-top:5px; margin-bottom: 10px">
+            <h3 class="container" style="float:left"> {{nota.imagendsc3}} </h3>
+            <img  class ="container" src={{nota.imagen4}} alt="" width="100%" style="margin-top:5px; margin-bottom: 10px">
+            <h3 class="container" style="float:left"> {{nota.imagendsc4}} </h3>
+            <img  class ="container" src={{nota.imagen5}} alt="" width="100%" style="margin-top:5px; margin-bottom: 10px">
+            <h3 class="container" style="float:left"> {{nota.imagendsc5}}</h3>
+            <img  class ="container" src={{nota.imagen6}} alt="" width="100%" style="margin-top:5px; margin-bottom: 10px">
+            <h3 class="container" style="float:left"> {{nota.imagendsc6}} </h3>
+        </div>                   
+
+      
+ 
+
+    </div>
+</body>

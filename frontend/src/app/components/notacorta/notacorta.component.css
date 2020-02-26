@@ -1,0 +1,80 @@
+
+
+
+html {
+    overflow-y: scroll;
+   }
+
+.capital::first-letter {
+   
+    float: right;
+ 
+    font-family: monospace;
+    font-size: 500%;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-right: 10px;
+    line-height: 50%;
+ 
+  }
+
+
+  
+h1 {font-family: 'Oswald', sans-serif;;
+    font-size: 23px;
+    margin-bottom: 4px;    
+    margin-top: 5px;
+    color: rgb(0, 0, 0);
+    }
+            
+    
+    .titulo {
+       
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden; }
+
+    .text {
+       
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+}
+    
+    article {padding:1%;border: rgb(88, 81, 81) solid 1px;  background-color:rgb(255, 255, 255);
+    }
+    
+    
+
+    
+    
+    article{border-radius: 20px; }
+    section{background-color:  rgb(241, 189, 111);}
+    
+    h1 {font-family: 'Fira Sans Condensed', sans-serif;
+    font-size: 50px;
+    margin-bottom: 4px;   
+    margin-top: -5px; 
+    
+    color: rgb(0, 0, 0);
+    }
+    
+    h2{font-family: 'Fira Sans Condensed', sans-serif; font-size: 20px; margin-top:6px;}
+        
+    h3{font-family: 'Fira Sans Condensed', sans-serif; font-size: 16px; color:gray ; }
+
+    h4{font-family: 'Fira Sans Condensed', sans-serif; font-size: 18px; color:gray ; }  
+    
+    h5{font-family: 'Fira Sans Condensed', sans-serif;    font-size: 18px ;    }
+     
+    h6{font-family: 'Anton', sans-serif; font-size: 40px; color:rgb(0, 0, 0) ; text-align: left; margin-top:10px }  
+    
+    p{font-family: 'Fira Sans Condensed', sans-serif;
+    font-size: 16px;
+    margin-top:6px;
+    }
+    
+    hr{margin: 5px;};

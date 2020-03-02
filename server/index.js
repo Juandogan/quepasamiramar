@@ -17,9 +17,10 @@ app.use(express.json()); // habilita para que el servidor entienda formato json,
 app.use(cors({origin:'http://localhost:4200'}));
 // Routes
 app.use('/api/cards', require('./routes/card.routes'));
-
+app.use('/',express.static('client',{redirect:false}));
 
 // Starting 
+app.get('*',function(req,res,next){res.sendFile(path.resolve('client/index.html'))});
 
 app.listen(app.get('port'), () => {console.log("Escuchando en puerto: ", app.get('port'))}); // app.listen escucha el puerto. 
 // app.listen  primer parametro puerto. funcion flecha para salida por consola. 

@@ -43,6 +43,7 @@ h1 {font-family: 'Oswald', sans-serif;;
         -webkit-box-orient: vertical;
         overflow: hidden;
 }
+i{margin-right: -35px}
     
     article {padding:1%;border: rgb(88, 81, 81) solid 1px;  background-color:rgb(255, 255, 255);
     }

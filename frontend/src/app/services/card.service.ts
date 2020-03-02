@@ -71,7 +71,7 @@ export class CardService {
 
          ordenarComercial(format){
        
-          return format = this.lala ="Ofertas"  ;
+          return format = this.lala ="Comercio"  ;
           
          }
       
@@ -80,6 +80,19 @@ export class CardService {
           return format = this.lala ="Turismo"  ;
           
          }
+
+         ordenarOfertas(format){
+       
+          return format = this.lala ="Ofertas"  ;
+          
+         }
+
+         ordenarShopping(format){
+       
+          return format = this.lala ="Shopping"  ;
+          
+         }
+
 
 
        

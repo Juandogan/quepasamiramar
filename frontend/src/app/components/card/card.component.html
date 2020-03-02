@@ -1,11 +1,5 @@
 
 
-
-
-
-
-
-
 <div  class ="container" style="margin-top: 125px" >
 <br>  
      <div  class="container main row">
@@ -14,8 +8,8 @@
    
  
      
-
-      <ng-container *ngIf="this.cardService.oculta else siguienteForm" >    
+        <ng-container *ngIf="this.cardService.oculta else siguienteForm" >    
+     
               <form  #Form="ngForm" (ngSubmit) ="agregarCard(Form)">
 
 
@@ -28,6 +22,7 @@
                   <option value="eventos">Eventos</option>
                   <option value="ventas">Ventas / Ofertas</option>
                   
+                  
                 </select>
 
 
@@ -37,17 +32,20 @@
                   <label for="Categorias"></label>
                   <select id = 'categoria' style="margin-top: 25px; max-width: 250px"  type="text" class="form-control" name="palabrasClaves" #palabrasClaves="ngModel" [(ngModel)]="cardService.cardSeleccionada.palabrasClaves"placeholder="Categorias">
                     <option value="#Cultura  ">#Cultura</option>
-                    <option value="#Cultura  ">#Cultura #Eventos </option>
-                    <option value="#Cultura  ">#Cultura #Talleres </option>
+                    <option value="#Cultura #Eventos ">#Cultura #Eventos </option>
+                    <option value="#Cultura #Talleres ">#Cultura #Talleres </option>
                     <option value="#Cultura #Recitales ">#Cultura #Recitales </option>
-                 
+                    <option value="#Comercio ">#Comercio</option>                 
                     <option value="#Institucional  ">#Institucional</option>
-                    <option value="#Comercial  ">#Comercial</option>
+                    <option value="#Ofertas  ">#Ofertas</option>
                     <option value="#Turismo  ">#Turismo</option>
                     
                   </select>
 
 
+
+
+                    
                   <small class="form-text text-muted">Palabras Claves.</small>
 
                   <input style="margin-top: 25px; "type="text" class="form-control" name="pill" #pill="ngModel" [(ngModel)]="cardService.cardSeleccionada.pill"placeholder="Categoria destacada" required >

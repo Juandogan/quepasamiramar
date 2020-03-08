@@ -14,7 +14,7 @@ export class CardService {
    filterPost:string =''
    lala :string =""
 
-  readonly URL_API = 'http://localhost:3000/api/cards/';
+  readonly URL_API = 'http://www.quepasamiramar.com/api/cards/';
 
 
   cardSeleccionada : Card;

@@ -45,7 +45,8 @@
             <p> {{ nota.description5 }}</p>
             
        
-             <h3>Fuente: <a target="_blank" href={{nota.description6}}> {{nota.description6 | slice: 0:40 }}...</a></h3>
+             <h3 class="cortar" >Fuente: <a  target="_blank" href={{nota.description6}}>{{ nota.description6.substr(0,50)}}.. </a></h3> 
+             
             <hr>
             
            

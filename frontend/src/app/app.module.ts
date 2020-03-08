@@ -12,6 +12,7 @@ import { NotaComponent } from './components/nota/nota.component';
 import { FiltroPipe } from './pipes/filtro.pipe';
 import { FiltroCulturaPipe } from './pipes/filtro-cultura.pipe';
 import { NotacortaComponent } from './components/notacorta/notacorta.component';
+import { CollapseNavbarComponent } from './components/collapse-navbar/collapse-navbar.component';
 
 
 
@@ -35,6 +36,7 @@ const routes :Routes = [{path: '', component: CarteleraComponent, pathMatch:"ful
     FiltroPipe,
     FiltroCulturaPipe,
     NotacortaComponent,
+    CollapseNavbarComponent, 
     
     
   ],
@@ -43,8 +45,9 @@ const routes :Routes = [{path: '', component: CarteleraComponent, pathMatch:"ful
     AppRoutingModule,
     FormsModule,                 //se importa
     HttpClientModule,
-    RouterModule.forRoot(routes)
-
+    RouterModule.forRoot(routes),
+ 
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

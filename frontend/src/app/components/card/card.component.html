@@ -1,205 +1,306 @@
-
+<!--  
 
 <div  class ="container" style="margin-top: 125px" >
-<br>  
-     <div  class="container main row">
+                      <br>  
+                    
+  <div  class="container main row">
 
     <div  class="  col-6">
-   
- 
-     
-        <ng-container *ngIf="this.cardService.oculta else siguienteForm" >    
-     
-              <form  #Form="ngForm" (ngSubmit) ="agregarCard(Form)">
-
-
-              <div class="form-group">
-                  
-               <label for="Tipo de Publicación"></label>
-                <select id = 'tipo' style="margin-top: 48px; max-width: 250px;float:right "type="text" class="form-control" name="tipo" #tipo="ngModel" [(ngModel)]="cardService.cardSeleccionada.tipo" placeholder="Tipo de publicación">
-                  <option value="notas">Nota Larga</option>
-                  <option value="notacorta">Nota Corta</option>
-                  <option value="eventos">Eventos</option>
-                  <option value="ventas">Ventas / Ofertas</option>
-                  
-                  
-                </select>
-
-
-
-          
-                  
-                  <label for="Categorias"></label>
-                  <select id = 'categoria' style="margin-top: 25px; max-width: 250px"  type="text" class="form-control" name="palabrasClaves" #palabrasClaves="ngModel" [(ngModel)]="cardService.cardSeleccionada.palabrasClaves"placeholder="Categorias">
-                    <option value="#Cultura  ">#Cultura</option>
-                    <option value="#Cultura #Eventos ">#Cultura #Eventos </option>
-                    <option value="#Cultura #Talleres ">#Cultura #Talleres </option>
-                    <option value="#Cultura #Recitales ">#Cultura #Recitales </option>
-                    <option value="#Comercio ">#Comercio</option>                 
-                    <option value="#Institucional  ">#Institucional</option>
-                    <option value="#Ofertas  ">#Ofertas</option>
-                    <option value="#Turismo  ">#Turismo</option>
-                    
-                  </select>
-
-
-
 
                     
-                  <small class="form-text text-muted">Palabras Claves.</small>
+                      
+                                <form  #Form="ngForm" (ngSubmit) ="agregarCard(Form)">
+                                    <div class="form-group">
+                                        <label for="Tipo de Publicación"></label>
 
-                  <input style="margin-top: 25px; "type="text" class="form-control" name="pill" #pill="ngModel" [(ngModel)]="cardService.cardSeleccionada.pill"placeholder="Categoria destacada" required >
-                  <small class="form-text text-muted">Categoria.</small>
+                                        <select id = 'tipo' style="margin-top: 48px; max-width: 250px;float:right "type="text" class="form-control" name="tipo" #tipo="ngModel" [(ngModel)]="cardService.cardSeleccionada.tipo" placeholder="Tipo de publicación">
+                                            <option value="notas">Nota Larga</option>
+                                            <option value="notacorta">Nota Corta</option>
+                                            <option value="eventos">Eventos</option>
+                                            <option value="ventas">Ventas / Ofertas</option>        
+                                        </select>                                  
+
+                                        <label for="Categorias"></label>
+                                        <select id = 'categoria' style="margin-top: 25px; max-width: 250px"  type="text" class="form-control" name="palabrasClaves" #palabrasClaves="ngModel" [(ngModel)]="cardService.cardSeleccionada.palabrasClaves"placeholder="Categorias">
+                                          <option value="#Cultura  ">#Cultura</option>
+                                          <option value="#Cultura #Eventos ">#Cultura #Eventos </option>
+                                          <option value="#Cultura #Talleres ">#Cultura #Talleres </option>
+                                          <option value="#Cultura #Recitales ">#Cultura #Recitales </option>
+                                          <option value="#Comercio ">#Comercio</option>                 
+                                          <option value="#Institucional  ">#Institucional</option>
+                                          <option value="#Ofertas  ">#Ofertas</option>
+                                          <option value="#Turismo  ">#Turismo</option>
+                                          
+                                        </select>
+                                                                            
+                                           <input style="margin-top: 25px; max-width: 250px"type="text" class="form-control" name="pill" #pill="ngModel" [(ngModel)]="cardService.cardSeleccionada.pill"placeholder="Categoria destacada" required >
+                                           <div class="form-group">
+                                              <label for="Texto">Titulo</label> 
+                                             <div class="input-group">
+                                               <div class="input-group-prepend">
+                                                  <div class="input-group-text">
+                                                      <i class="fa fa-quote-right"></i>
+                                                  </div>
+                                                </div> 
+                                                      <input id="Texto" name="titulo" placeholder="Texto"  type="text" class="form-control" aria-describedby="TextoHelpBlock"#titulo="ngModel" [(ngModel)]="cardService.cardSeleccionada.titulo"> 
+                                               </div>                          
+                                             </div> 
+
+                                  
+                                  
+                            
+                               
 
 
-                  <input style="margin-top: 25px;" type="text" maxlength="57" class="form-control"name="titulo" #titulo="ngModel" [(ngModel)]="cardService.cardSeleccionada.titulo" placeholder="Titulo" >
-                  <small class="form-text text-muted">Titulo</small>
+
+                                        <label for="text">Subtitulo</label>         
+                                    <textarea rows="3"  style="margin-top: 25px; margin-top:-5px"class="form-control" aria-label="With textarea" name="description" #description="ngModel" #description="ngModel" [(ngModel)]="cardService.cardSeleccionada.description" placeholder="Descripcion"></textarea>
+                                    
+                                    <input style="margin-top: 25px;" type="text"  class="form-control"name="imagen2" #imagen="ngModel" [(ngModel)]="cardService.cardSeleccionada.imagen2" placeholder="Url Imagen" >
+                                    <input style="margin-top: 25px;" type="text"  class="form-control"name="imagendsc2" #imagen="ngModel" [(ngModel)]="cardService.cardSeleccionada.imagendsc2" placeholder="descripcion" >
+                                    <input style="margin-top: 25px;" type="text"  class="form-control"name="imagen3" #imagen="ngModel" [(ngModel)]="cardService.cardSeleccionada.imagen3" placeholder="Url Imagen" >
+                                    <input style="margin-top: 25px;" type="text"  class="form-control"name="imagendsc3" #imagen="ngModel" [(ngModel)]="cardService.cardSeleccionada.imagendsc3" placeholder="descripcion" >
+                                    <input style="margin-top: 25px;" type="text"  class="form-control"name="imagen4" #imagen="ngModel" [(ngModel)]="cardService.cardSeleccionada.imagen4" placeholder="Url Imagen" >
+                                    <input style="margin-top: 25px;" type="text"  class="form-control"name="imagendsc4" #imagen="ngModel" [(ngModel)]="cardService.cardSeleccionada.imagendsc4" placeholder="descripcion" >
+                                    <input style="margin-top: 25px;" type="text"  class="form-control"name="imagen5" #imagen="ngModel" [(ngModel)]="cardService.cardSeleccionada.imagen5" placeholder="Url Imagen" >
+                                    <input style="margin-top: 25px;" type="text"  class="form-control"name="imagendsc5" #imagen="ngModel" [(ngModel)]="cardService.cardSeleccionada.imagendsc5" placeholder="descripcion" >
+                                    <input style="margin-top: 25px;" type="text"  class="form-control"name="imagen6" #imagen="ngModel" [(ngModel)]="cardService.cardSeleccionada.imagen6" placeholder="Url Imagen" >
+                                    <input style="margin-top: 25px;" type="text"  class="form-control"name="imagendsc6" #imagen="ngModel" [(ngModel)]="cardService.cardSeleccionada.imagendsc6" placeholder="descripcion" >
+                          
+                          
+                          
+                          
+                            
+
+                                    <textarea rows="2"  style="margin-top: 25px;"class="form-control" aria-label="With textarea" name="description2" #description="ngModel" #description="ngModel" [(ngModel)]="cardService.cardSeleccionada.description2" placeholder="Descripcion"></textarea>
+                                    
+                            
+                                    
+                                    <textarea rows="2"  style="margin-top: 25px;"class="form-control" aria-label="With textarea" name="description3" #description="ngModel" #description="ngModel" [(ngModel)]="cardService.cardSeleccionada.description3" placeholder="Descripcion"></textarea>
+                                    <small class="form-text text-muted">3er Parrafo</small>
+                            
+                                    
+                                    <textarea rows="2"  style="margin-top: 25px;"class="form-control" aria-label="With textarea" name="description4" #description="ngModel" #description="ngModel" [(ngModel)]="cardService.cardSeleccionada.description4" placeholder="Descripcion"></textarea>
+                                    <small class="form-text text-muted">4to Parrafo.</small>
+                            
+                                    
+                                    <textarea rows="2"  style="margin-top: 25px;"class="form-control" aria-label="With textarea" name="description5" #description="ngModel" #description="ngModel" [(ngModel)]="cardService.cardSeleccionada.description5" placeholder="Descripcion"></textarea>
+                                    <small class="form-text text-muted">4to Parrafo.</small>
+                                    
+                                    <textarea rows="2"  style="margin-top: 25px;"class="form-control" aria-label="With textarea" name="description6" #description="ngModel" #description="ngModel" [(ngModel)]="cardService.cardSeleccionada.description6" placeholder="Descripcion"></textarea>
+                                    
+                                  
+    </div>
+                                
+                                            
+                                            <div style="margin-top:13%">
+
+                                            <button class="btn btn-dark" (click)=resetForm(Form)>Limpiar</button>
+                                            <button style="margin-left:15px" class="btn btn-dark">Guardar</button>
+                                            <button style="margin-left:15px" class="btn btn-dark" (click)=borrar()>Borrar</button>
+                                            
+                                            </div>     
 
 
-
-
-
-                  <input style="margin-top: 25px;" type="text"  class="form-control"name="imagen" #imagen="ngModel" [(ngModel)]="cardService.cardSeleccionada.imagen" placeholder="Url Imagen" >
-                  <input style="margin-top: 25px;" type="text"  class="form-control"name="imagendsc" #imagen="ngModel" [(ngModel)]="cardService.cardSeleccionada.imagendsc" placeholder="descripcion" >
-                  <input style="margin-top: 25px;" type="text"  class="form-control"name="imagen2" #imagen="ngModel" [(ngModel)]="cardService.cardSeleccionada.imagen2" placeholder="Url Imagen" >
-                  <input style="margin-top: 25px;" type="text"  class="form-control"name="imagendsc2" #imagen="ngModel" [(ngModel)]="cardService.cardSeleccionada.imagendsc2" placeholder="descripcion" >
-                  <input style="margin-top: 25px;" type="text"  class="form-control"name="imagen3" #imagen="ngModel" [(ngModel)]="cardService.cardSeleccionada.imagen3" placeholder="Url Imagen" >
-                  <input style="margin-top: 25px;" type="text"  class="form-control"name="imagendsc3" #imagen="ngModel" [(ngModel)]="cardService.cardSeleccionada.imagendsc3" placeholder="descripcion" >
-                  <input style="margin-top: 25px;" type="text"  class="form-control"name="imagen4" #imagen="ngModel" [(ngModel)]="cardService.cardSeleccionada.imagen4" placeholder="Url Imagen" >
-                  <input style="margin-top: 25px;" type="text"  class="form-control"name="imagendsc4" #imagen="ngModel" [(ngModel)]="cardService.cardSeleccionada.imagendsc4" placeholder="descripcion" >
-                  <input style="margin-top: 25px;" type="text"  class="form-control"name="imagen5" #imagen="ngModel" [(ngModel)]="cardService.cardSeleccionada.imagen5" placeholder="Url Imagen" >
-                  <input style="margin-top: 25px;" type="text"  class="form-control"name="imagendsc5" #imagen="ngModel" [(ngModel)]="cardService.cardSeleccionada.imagendsc5" placeholder="descripcion" >
-                  <input style="margin-top: 25px;" type="text"  class="form-control"name="imagen6" #imagen="ngModel" [(ngModel)]="cardService.cardSeleccionada.imagen6" placeholder="Url Imagen" >
-                  <input style="margin-top: 25px;" type="text"  class="form-control"name="imagendsc6" #imagen="ngModel" [(ngModel)]="cardService.cardSeleccionada.imagendsc6" placeholder="descripcion" >
-        
-        
-        
-        
-                  <textarea rows="2"  style="margin-top: 25px;"class="form-control" aria-label="With textarea" name="description" #description="ngModel" #description="ngModel" [(ngModel)]="cardService.cardSeleccionada.description" placeholder="Descripcion"></textarea>
-                  <small class="form-text text-muted">1er Parrafo.</small>
-          
-
-                  <textarea rows="2"  style="margin-top: 25px;"class="form-control" aria-label="With textarea" name="description2" #description="ngModel" #description="ngModel" [(ngModel)]="cardService.cardSeleccionada.description2" placeholder="Descripcion"></textarea>
-                  <small class="form-text text-muted">2do Parrafo.</small>
-          
+                                </form>  
+                      
+                             
+    </div>   
                   
-                  <textarea rows="2"  style="margin-top: 25px;"class="form-control" aria-label="With textarea" name="description3" #description="ngModel" #description="ngModel" [(ngModel)]="cardService.cardSeleccionada.description3" placeholder="Descripcion"></textarea>
-                  <small class="form-text text-muted">3er Parrafo</small>
-          
-                  
-                  <textarea rows="2"  style="margin-top: 25px;"class="form-control" aria-label="With textarea" name="description4" #description="ngModel" #description="ngModel" [(ngModel)]="cardService.cardSeleccionada.description4" placeholder="Descripcion"></textarea>
-                  <small class="form-text text-muted">4to Parrafo.</small>
-          
-                  
-                  <textarea rows="2"  style="margin-top: 25px;"class="form-control" aria-label="With textarea" name="description5" #description="ngModel" #description="ngModel" [(ngModel)]="cardService.cardSeleccionada.description5" placeholder="Descripcion"></textarea>
-                  <small class="form-text text-muted">4to Parrafo.</small>
-                  
-                  <textarea rows="2"  style="margin-top: 25px;"class="form-control" aria-label="With textarea" name="description6" #description="ngModel" #description="ngModel" [(ngModel)]="cardService.cardSeleccionada.description6" placeholder="Descripcion"></textarea>
-                  <small class="form-text text-muted">4to Parrafo.</small>
-        
-                </div>
-               
-          
-          
-          <div style="margin-top:13%">
-           <button class="btn btn-dark" (click)=resetForm(Form)>Limpiar</button>
-           <button style="margin-left:15px" class="btn btn-dark">Guardar</button>
-           <button style="margin-left:15px" class="btn btn-dark" (click)=borrar()>Borrar</button>
+
+                    <div  class=" tarjeta container col-3" style="border-left:1px solid rgb(165, 165, 165); margin-right:-52px">
+                    
+                        <h3>{{cardService.cardSeleccionada.palabrasClaves}}</h3> 
+                        <h1>{{cardService.cardSeleccionada.titulo}}</h1>
+                        <hr>
+                        <img  src={{cardService.cardSeleccionada.imagen}} alt=""  width="250px" height="230px" style="float: left;margin-right: 20px; margin-bottom: 10px">
+                        <h2 class ="texto" >{{cardService.cardSeleccionada.description}}</h2>
+                        
+                        
+                        
+                                         
+
+                    </div>
+
            
-          </div>
 
-        
-
-
-
-    </form>  
-    
-</ng-container>
-
-  </div>   
- 
-
-  <div  class=" tarjeta container col-3" style="border-left:1px solid rgb(0, 0, 0) ">
-   
-      <h3>{{cardService.cardSeleccionada.palabrasClaves}}</h3> 
-      <h1>{{cardService.cardSeleccionada.titulo}}</h1>
-      <hr>
-      <img  src={{cardService.cardSeleccionada.imagen}} alt=""  width="250px" height="230px" style="float: left;margin-right: 20px; margin-bottom: 10px">
-      <h2 class ="texto" >{{cardService.cardSeleccionada.description}}</h2>
-      
-      
-      
-      <div  class=" tarjeta container col-12" >
-
-    
-
-
-      </div>
-  
-
-  </div>
-
-  
-
-
+                 
 </div>
 
 
-<ng-template #siguienteForm>
-  <form  #Form="ngForm" (ngSubmit) ="agregarCard(Form)">
 
 
-    <div class="form-group">
+-->
+
+
+
+
+
+<div  class ="container" style="margin-top: 125px; background-color: white " >
+    <br>  
+  
+
+
+
+     
+
+<div class="main row"   >
+        <div class="col-4" > 
+                <img  class="logoresponsive" src="../assets/gestorlogo.jpg" alt="" width="40%" > 
+            </div>
+            <div class="col-8">
+
+            
+           
+           
+                <form  #Form="ngForm" (ngSubmit) ="agregarCard(Form)">
+                  
+                  
+                      <label for="Tipo de Publicación"></label>
+                      <select  id = 'tipo' (change) ="openEditor(tipo.value)" style="max-width: 250px; margin-top:-10px; margin-left: -220px" type="text" class="form-control text-align:center;" name="tipo" #tipo="ngModel" [(ngModel)]="cardService.cardSeleccionada.tipo" placeholder="Tipo de publicación">      
+                          <option value="notacorta" selected>Template Corto</option>
+                          <option value="notas">Template Largo</option>
+                          <option value="eventos">Plantilla Eventos</option>
+                          <option value="ventas">Ventas / Ofertas</option>       
+                        
+                      </select>                       
+                 
+                   
+                  </form>
+            
+
+
+                </div>
+                </div>
+                
+<div style="margin-top:30px" class="col-12">
+               
+            </div>
+</div>
+
+
+       <div [ngSwitch]="cardService.cardSeleccionada.tipo" >                  
+    <div class="container" >
         
-     <label for="Tipo de Publicación"></label>
-      <select id = 'tipo' style="margin-top: 48px; max-width: 250px;float:right "type="text" class="form-control" name="tipo" #tipo="ngModel" [(ngModel)]="cardService.cardSeleccionada.tipo" placeholder="Tipo de publicación">
-        <option value="notas">Nota Larga</option>
-        <option value="notacorta">Nota Corta</option>
-        <option value="eventos">Eventos</option>
-        <option value="ventas">Ventas / Ofertas</option>
-        
-      </select>
-
-
-
-
-        
-        <label for="Categorias"></label>
-        <select id = 'categoria' style="margin-top: 25px; max-width: 250px"  type="text" class="form-control" name="palabrasClaves" #palabrasClaves="ngModel" [(ngModel)]="cardService.cardSeleccionada.palabrasClaves"placeholder="Categorias">
-          <option value="#Cultura  ">#Cultura</option>
-          <option value="#Cultura  ">#Cultura #Eventos </option>
-          <option value="#Cultura  ">#Cultura #Talleres </option>
-          <option value="#Cultura #Recitales ">#Cultura #Recitales </option>
-       
-          <option value="#Institucional  ">#Institucional</option>
-          <option value="#Comercial  ">#Comercial</option>
-          <option value="#Turismo  ">#Turismo</option>
+<div *ngSwitchCase="'notacorta'">
+    
           
-        </select>
+              <div style="margin-top:10px;" class="  container main row">
+                 
+                <div  class="col-6" >
+                    
+                    <form  #Form="ngForm" (ngSubmit) ="agregarCard(Form)">
+                            <input type="text" style="max-width: 500px; visibility:hidden"  class="form-control"name="tipo" #tipo="ngModel" [(ngModel)]="cardService.cardSeleccionada.tipo" placeholder="Url Imagen" >
+                                      <label for="Categorias"></label>
+                                      <h1 style ="margin-bottom:-5px"> Seleccione categoría</h1>
+                                      <select id = 'categoria' style="margin-top: 5px; max-width: 250px"  type="text" class="form-control" name="palabrasClaves" #palabrasClaves="ngModel" [(ngModel)]="cardService.cardSeleccionada.palabrasClaves"placeholder="Categorias">
+                                        <option value="#Cultura  ">#Cultura</option>
+                                        <option value="#Cultura #Eventos ">#Cultura #Eventos </option>
+                                        <option value="#Cultura #Talleres ">#Cultura #Talleres </option>
+                                        <option value="#Cultura #Recitales ">#Cultura #Recitales </option>
+                                        <option value="#Cultura #Recitales ">#Cultura #Teatro </option>
+                                        
+                                        <option value="#Comercio ">#Comercios</option>                 
+                                        <option value="#Comercio ">#Comercios #Ofertas</option>     
+                                        <option value="#Institucional  ">#Institucional</option>
+                                        <option value="#Turismo  ">#Turismo</option>
+                                        </select>   
 
 
-        <small class="form-text text-muted">Ingresa las palabras claves o Hashtag.</small>
+                                        <div style="margin-top:20px">
+                                            <h1 style ="margin-top:10px">Pill Badge</h1>
+                                            <input id="Texto" name="pill" placeholder="Texto" style="max-width: 500px" type="text" class="form-control" aria-describedby="TextoHelpBlock"#pill="ngModel" [(ngModel)]="cardService.cardSeleccionada.pill"> 
+                                          </div>
+    
+
+                                        <div style="margin-top:20px">
+                                        <h1 style ="margin-top:10px"> Titulo</h1>
+                                        <input id="Texto" name="titulo" placeholder="Texto" style="max-width: 500px" type="text" class="form-control" aria-describedby="TextoHelpBlock"#titulo="ngModel" [(ngModel)]="cardService.cardSeleccionada.titulo"> 
+                                      </div>
+
+                                      <div style="margin-top:30px">
+                                      <h1 style ="margin-top:10px">Imagen de Portada</h1>
+                                        <input type="text" style="max-width: 500px"  class="form-control"name="imagen" #imagen="ngModel" [(ngModel)]="cardService.cardSeleccionada.imagen" placeholder="Url Imagen" >
+                                      </div>  
+                                      <div style="margin-top:30px">
+                                          <h1 style ="margin-top:10px">Subtitulo</h1>
+                                          <textarea rows="2"  style="margin-top: 25px; margin-top:-5px"class="form-control" aria-label="With textarea" name="description" #description="ngModel" #description="ngModel" [(ngModel)]="cardService.cardSeleccionada.description" placeholder="Descripcion"></textarea>
+                                          </div> 
+
+                                          <div style="margin-top:30px">
+                                              <h1 style ="margin-top:10px">Párrafos</h1>
+                                              <textarea rows="2"  style="margin-top: 25px;"class="form-control" aria-label="With textarea" name="description2" #description="ngModel" #description="ngModel" [(ngModel)]="cardService.cardSeleccionada.description2" placeholder="Descripcion"></textarea>
+                                              </div> 
+
+                                              <div style="margin-top:10px">                                              
+                                                  <textarea rows="2"  style="margin-top: 25px;"class="form-control" aria-label="With textarea" name="description3" #description="ngModel" #description="ngModel" [(ngModel)]="cardService.cardSeleccionada.description3" placeholder="Descripcion"></textarea>
+                                                  </div> 
+
+                                                  <div style="margin-top:10px">                                                     
+                                                      <textarea rows="2"  style="margin-top: 25px;"class="form-control" aria-label="With textarea" name="description4" #description="ngModel" #description="ngModel" [(ngModel)]="cardService.cardSeleccionada.description4" placeholder="Descripcion"></textarea>
+                                                      </div> 
+
+                                                      <div style="margin-top:10px">                                                     
+                                                        <textarea rows="2"  style="margin-top: 25px;"class="form-control" aria-label="With textarea" name="description5" #description="ngModel" #description="ngModel" [(ngModel)]="cardService.cardSeleccionada.description5" placeholder="Descripcion"></textarea>
+                                                        </div> 
+
+                                                        <div style="margin-top:20px">
+                                                            <h1 style ="margin-top:10px">Link relacionado</h1>
+                                                            <input id="Texto" name="description6" placeholder="Texto" style="max-width: 500px" type="text" class="form-control" aria-describedby="TextoHelpBlock"#description6="ngModel" [(ngModel)]="cardService.cardSeleccionada.description6"> 
+                                                          </div>
+                                           
+                                                        
+                                             
 
 
-        <div style="margin-top:13%">
-          <button class="btn btn-dark" (click)=resetForm(Form)>Limpiar</button>
-          <button style="margin-left:15px" class="btn btn-dark">Guardar</button>
-          <button style="margin-left:15px" class="btn btn-dark" (click)=borrar()>Borrar</button>
-           <button  style="margin-left:15px" class="btn btn-dark" >Continuar</button>
-         </div>
-
-       
+                                        <div style="margin-top:40px">
 
 
-      </div>
+                                          <button class="btn btn-dark" (click)=resetForm(Form)>Limpiar</button>
+                                          <button style="margin-left:15px" class="btn btn-dark">Guardar</button>
+                                          <button style="margin-left:15px" class="btn btn-dark" (click)=borrar()>Borrar</button>
+                                        </div>
+                                        </form>     
+                                      
+                                        
+                                </div>
+                                <div   class="  col-6">
+                                  <div style="position:fixed; max-width: 30%;">
+                                     
+                                    <h3>{{cardService.cardSeleccionada.palabrasClaves}} <span class="badge badge-danger" style="margin-right: 5px;">{{cardService.cardSeleccionada.pill}} </span></h3> 
+                        <h1>{{cardService.cardSeleccionada.titulo}}</h1>
+                        <h2 class ="texto" >{{cardService.cardSeleccionada.description}}</h2>
+                        <hr>
+                        <img  src={{cardService.cardSeleccionada.imagen}} alt=""  width="200px" height="230px" style="float: left;margin-right: 20px; margin-bottom: 10px">
+                        <h3 class ="texto capital" >{{cardService.cardSeleccionada.description2}}</h3>
+                        <h3>{{cardService.cardSeleccionada.description3}}</h3>
+                        <h3>{{cardService.cardSeleccionada.description4}}</h3>
+                        <h3>{{cardService.cardSeleccionada.description5}}</h3>
+                        <h3>{{cardService.cardSeleccionada.description6}}</h3>
+                        <a href={{cardService.cardSeleccionada.link}}>{{cardService.cardSeleccionada.link}}</a>
+                               
+                      </div>
+                
+                                  </div>
+
+                              </div>     
+                      
+                       
+                </div>
+                
+</div>
+
+
+
+
+
+      <div *ngSwitchCase="'notas'"><h1>caso 2</h1></div>
+      <div *ngSwitchCase="'ofertas'"><h1>caso 3</h1></div>
+      <div *ngSwitchCase="'lalala'"><h1>caso 3</h1></div>
+  
      
 
 
+ 
+    </div>
 
-
-
-
-
-</form>  
-  </ng-template>
-  

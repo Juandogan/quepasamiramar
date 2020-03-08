@@ -13,31 +13,37 @@
   
 
 
- <Article class= "tarjeta cargando container col-xs-12 col-sm-12 col-md-12 col-lg-3 " *ngFor="let arregloCard of (cardService.arregloCard |filtro:format)">
+ <Article class= "tarjeta cargando container col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-3" *ngFor="let arregloCard of (cardService.arregloCard |filtro:format)">
 
   
         
            
-        <h3 class="response" >{{arregloCard.palabrasClaves}}
-           </h3>
-          <span class="badge badge-danger"></span> 
+        <h3 class="response" >  {{arregloCard.palabrasClaves}}             
+        </h3>
 
+         
+   
+         
           <a routerLink="{{arregloCard.tipo}}/{{arregloCard._id}}"><h1 class="titulo" style="overflow-wrap: break-word;"> {{ arregloCard.titulo }}</h1></a>  
+          <h3 style="margin-left: 8px" > </h3>
       <hr>
-     
+   
       <img  class="img" src={{arregloCard.imagen}} alt="" width="260px" height="230px">
 
       
       <hr>
       <h2 class="text">{{ arregloCard.description }}</h2>
 <h3>
+    <!-- 
       <a [routerLink]="[arregloCard.tipo,arregloCard._id]">Leer más...</a>
-    
+    -->
     </h3>
-
+    
    
 <div class="cardfooter" style="margin-top:5px">
+        <h3 class="text">Publicado: {{ arregloCard.creado |date: 'dd/M/yyyy' }}</h3>
     <hr>
+
 
 </div>
 

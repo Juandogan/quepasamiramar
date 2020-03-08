@@ -3,6 +3,7 @@ import {ActivatedRoute} from '@angular/router';
 import { CardService} from '../../services/card.service';
 import { Card } from '../../models/card';
 import { Location } from '@angular/common'; 
+import { NgxSpinnerService} from 'ngx-spinner';
 
 
 @Component({
@@ -13,14 +14,18 @@ import { Location } from '@angular/common';
 export class NotacortaComponent implements OnInit {
   nota: Card;
   constructor(
+  private spinnerService:NgxSpinnerService,
   private ruta:ActivatedRoute,
   private _servicio:CardService,
-  private location: Location
+  private location: Location,
+
 ) 
 
 { 
 
   this.nota = new Card();
+
+
   this.ruta.params.subscribe(params=>{params['_id'];
 
   this._servicio.getOneCard(params['_id'])
@@ -33,8 +38,13 @@ export class NotacortaComponent implements OnInit {
 }  
 
 ngOnInit() {
+
+
   window.scroll(0, 0);
+
   this._servicio.getCard();
+
+
 }
 
 cancel() { 

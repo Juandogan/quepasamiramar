@@ -25,6 +25,12 @@ const CardSchema = new Schema ({
     description4:{type : String, required : false},
     description5:{type : String, required : false},
     description6:{type : String, required : false},
+    description7:{type : String, required : false},
+    description8:{type : String, required : false},
+    description9:{type : String, required : false},
+    description10:{type : String, required : false},
+
+
     creado: { type: Date, default: Date.now },
     pill:{type:String, requiered : false},
     tipo:{type:String, required:false}

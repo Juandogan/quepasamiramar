@@ -1,68 +1,68 @@
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <div class="container fixed-top" style="background-color:white; overflow:hidden; padding: 0%; position: fixed"> 
-         <img class="logoresponsive" src="../assets/logo2.jpg" alt="" width="14%" >
+         <img class="logores" src="../assets/logo2.jpg" alt="" width="14%" >
     
 
 
     </div> 
   
-      <nav class="container navbar navbar-expand-lg navbar-dark   fixed-top" style="background-color:black;  margin-top:80px; border-radius: 5px" >
+      <nav class="nav container navbar navbar-expand-xl navbar-dark fixed-top" style="background-color:black;  margin-top:80px; border-radius: 5px" >
       
         
-          <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler " (click)="toggleNavbar()"type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
         
-          <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+          <div [ngClass]="{ 'show': navbarOpen }" class="collapse navbar-collapse show">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a class="nav-link"  (click)=" this.cardService.ordenarTodos(cardService)" [routerLink]="['/']" >Inicio <span class="sr-only">(current)</span></a>
+                <a class="nav-link"  (click)="toggleNavbar()" (click)= this.cardService.ordenarTodos(cardService) [routerLink]="['/']" >Inicio <span class="sr-only">(current)</span></a>
               </li>
           
     
               <li class="nav-item">
-                <a class="nav-link" (click)= this.cardService.eventosSalidas(cardService) [routerLink]="['/']">Eventos/Salidas</a>
+                <a class="nav-link" (click)="toggleNavbar()" (click)= this.cardService.eventosSalidas(cardService) [routerLink]="['/']">Eventos/Salidas</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" (click)= this.cardService.ordenarOfertas(cardService) [routerLink]="['/']">Ofertas</a>
+                <a class="nav-link" (click)="toggleNavbar()" (click)= this.cardService.ordenarOfertas(cardService) [routerLink]="['/']">Ofertas</a>
               </li>
 
 
               <li class="nav-item">
-              <a class="nav-link" (click)= this.cardService.ordenarShopping(cardService) [routerLink]="['/']">ShoppingVirtual</a>
+              <a class="nav-link" (click)="toggleNavbar()" (click)= this.cardService.ordenarShopping(cardService) [routerLink]="['/']">ShoppingVirtual</a>
               </li>
       
               
               <li class="nav-item">
-                <a class="nav-link" (click)= this.cardService.ordenarCultura(cardService) [routerLink]="['/']">Cultura</a>
+                <a class="nav-link" (click)="toggleNavbar()" (click)= this.cardService.ordenarCultura(cardService) [routerLink]="['/']">Cultura</a>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" (click)= this.cardService.ordenarInsti(cardService) [routerLink]="['/']">Institucional</a>
+                  <a class="nav-link" (click)="toggleNavbar()" (click)= this.cardService.ordenarInsti(cardService) [routerLink]="['/']">Institucional</a>
                   </li>
 
                   <li class="nav-item">
-                    <a class="nav-link" (click)= this.cardService.ordenarComercial(cardService) [routerLink]="['/']">Comercios</a>
+                    <a class="nav-link" (click)="toggleNavbar()" (click)="toggleNavbar()" (click)= this.cardService.ordenarComercial(cardService) [routerLink]="['/']">Comercios</a>
                     </li>
             
                     
           
                   
                 <li class="nav-item">
-                  <a class="nav-link" (click)= this.cardService.ordenarTurismo(cardService) [routerLink]="['/']">Turismo</a>
+                  <a class="nav-link" (click)="toggleNavbar()" (click)= this.cardService.ordenarTurismo(cardService) [routerLink]="['/']">Turismo</a>
                   </li>
           
-                
+                <!-- 
                     <li class="nav-item">
-                      <a class="nav-link" [routerLink]="['/publicar']">Publicar</a>
+                      <a class="nav-link"  (click)="toggleNavbar()" [routerLink]="['/publicar']">Publicar</a>
                     </li>  
-         
+          -->
                                      
             </ul>
             <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" name ="filterPost" placeholder="Buscar" aria-label="Search" [(ngModel)]="filterPost">
-              <button class="btn btn-outline-success my-2 my-sm-0"  (click)= "this.cardService.ordenarPapa(filterPost)" >Buscar</button>
+              <input class="form-control mr-sm-2 soloweb" type="search" name ="filterPost" placeholder="Buscar" aria-label="Search" [(ngModel)]="filterPost">
+              <button class="btn btn-outline-success my-2 my-sm-0 soloweb"  (click)= "this.cardService.ordenarPapa(filterPost)" >Buscar</button>
             </form>
           </div>
 

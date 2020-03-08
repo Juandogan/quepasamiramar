@@ -12,7 +12,7 @@ import { CardService } from '../../services/card.service'
 export class NavbarComponent implements OnInit {
 
    filterPost:string;
-
+   navbarOpen = false;
 
   constructor(
     public cardService:CardService,
@@ -26,7 +26,10 @@ export class NavbarComponent implements OnInit {
   }
 
 
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
 
+  }
 
 }
 

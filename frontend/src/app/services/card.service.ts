@@ -14,7 +14,7 @@ export class CardService {
    filterPost:string =''
    lala :string =""
 
-  readonly URL_API = 'http://quepasamiramar.com/api/cards/';
+  readonly URL_API = 'http://localhost:3000/api/cards/';
 
 
   cardSeleccionada : Card;
@@ -41,7 +41,10 @@ export class CardService {
    }
 
       
+ocultaForm(){
+this.oculta =false
 
+}
 
 
    

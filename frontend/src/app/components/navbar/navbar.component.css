@@ -9,6 +9,8 @@ h2 {font-family: 'PT Sans Narrow', sans-serif;
     font-size: 16px;
 }
 
+.classbtn{float: left; }
+
 .inicio{overflow: hidden;}
 
 .cabecera{
@@ -20,18 +22,22 @@ z-index: 1030;
 }
 
 @media (max-width: 1200px) {
-    .soloweb {display: none;        
-
-             
-
-    }
-
-.logoresponsive{
-width: 45%;
+    .soloweb {display: none}  
+    
+    .nav{border-radius: 50px}
+                       
+    .logores{
+        width: 45%!important }
 
 }
 
-
 .imgresponsive{width: 300%;}
+
+
+
+@media (max-width: 400px) {
+  
+    .logoresponsive{
+        width: 35%;}
 
 }

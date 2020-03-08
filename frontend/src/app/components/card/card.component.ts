@@ -13,11 +13,11 @@ import { Card } from '../../models/card';
 })
 
 export class CardComponent implements OnInit {
-  
-
+  public tipoForm = "nota";
+  public tipo:string
   constructor(
     public cardService:CardService,
-    
+ 
               
   ) { 
     console.log(this.cardService)
@@ -29,13 +29,24 @@ export class CardComponent implements OnInit {
     
     this.pedirTarjetas();
     this.cardService.oculta=true;
-   
+    
     
     this.cardService.cardSeleccionada.imagen="https://scontent.faep7-1.fna.fbcdn.net/v/t1.0-9/17554268_1753441241637786_6166589062135111479_n.jpg?_nc_cat=103&_nc_eui2=AeFpUqhzxg-GlApYJ7tuA9BS7hwSB2Ikrbb5CJKtZohc9hGTFnR1GJH9mXZbAGc4scLc6AxhlavquJhOBIoHOu09JCsQU0sHbLujon6eIJN0fg&_nc_ohc=5dI5s6lWwg4AX8va1GU&_nc_ht=scontent.faep7-1.fna&oh=8a2fa631eb1a0108a23acdb72a372fec&oe=5ECB6C27"
-    this.cardService.cardSeleccionada.titulo="Lorem Ipsum is simply dummy typesetting"
+    this.cardService.cardSeleccionada.titulo="aLorem Ipsum is simply dummy typesetting"
     this.cardService.cardSeleccionada.description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
-  }
+    this.cardService.cardSeleccionada.tipo="Template Corto"
+
+  } 
  
+
+openEditor(tipoForm:string){
+
+  this.tipoForm= this.tipoForm;
+
+
+
+
+};
 
 pedirTarjetas(){
 this.cardService.getCard()

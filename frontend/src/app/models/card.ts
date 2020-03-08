@@ -1,6 +1,6 @@
 export class Card {
 
-    constructor(_id='', palabrasClaves='', titulo='', imagen='',imagen2='',imagen3='',imagen4='',imagen5='',imagen6='', description='', description2='', description3='', description4='', description5='', description6='', pill='', tipo="",imagendsc='',imagendsc2='',imagendsc3='',imagendsc4='',imagendsc5='',imagendsc6='',){
+    constructor(_id='', palabrasClaves='', titulo='', imagen='',imagen2='',imagen3='',imagen4='',imagen5='',imagen6='', description='', description2='', description3='', description4='', description5='', description6='', pill='', tipo="",imagendsc='',imagendsc2='',imagendsc3='',imagendsc4='',imagendsc5='',creado=''){
 
      this._id = _id;
         this.palabrasClaves = palabrasClaves;
@@ -16,15 +16,15 @@ export class Card {
         this.imagen = imagendsc3;
         this.imagen = imagendsc4;
         this.imagen = imagendsc5;
-        this.imagen = imagendsc6;
-
+       
         this.description = description;
         this.description2 = description2;
-        this.description2 = description3;
-        this.description2 = description4;
-        this.description2 = description5;
-        this.description2 = description6;
+        this.description3 = description3;
+        this.description4 = description4;
+        this.description5 = description5;
+        this.description6 = description6;
 
+        this.creado = creado
         this.pill = pill;
         this.tipo = tipo;
 
@@ -49,7 +49,7 @@ export class Card {
     imagendsc3: String;
     imagendsc4: String;
     imagendsc5: String;
-    imagendsc6: String;
+
 
     description: String;
     description2: String;
@@ -57,7 +57,10 @@ export class Card {
     description4: String;
     description5: String;
     description6: String;
+    link :String;
+    link1 :String;
 
+    creado:String;
     pill:String;
     tipo:String;
 }
